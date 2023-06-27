@@ -856,7 +856,6 @@ function checkgroundstationstatus(element,groundstationlist){
         }
     }
     catch(ERROR) {
-    print(ERROR)
     }
     return groundstationlist;
 }
@@ -912,6 +911,7 @@ function returnpayloads(spacecraft){
 
     elementlist = returnSubElements(spacecraft);
     payloadlist = ALH.createList();
+    print(elementlist.elementlist[0])
     for (i = 0; i < elementlist.Noelements; i++){
         payloadlist = checkpayloadstatus(elementlist.elementlist[i],payloadlist)
     }
